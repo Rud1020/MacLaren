@@ -1,0 +1,409 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2? family= Poppins:wght@300;400;500;600 & display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+
+:root {
+    --main-color: #5DE0E6;
+    
+    --second-color: #004AAD;
+    --text-color: #444;
+    --gradient: linear-gradient(#5DE0E6, #004AAD);
+
+}
+
+/* Custon scroll Bar */
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+
+}
+
+section {
+    padding: 50px 100px;
+
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(224, 229, 236);
+    padding: 5px 100px;
+
+}
+
+.logo img {
+    width: 50px;
+
+}
+
+.navbar{
+    display: flex;
+
+}
+
+.navbar li {
+    position: relative;
+
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--gradient);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+
+}
+
+.navbar a:hover::after{
+    width: 100%;
+
+}
+
+
+.header-btn a{
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+
+.header-btn .sign-in{
+    background: #004AAD;
+    color: #fff;
+    border-radius: 0.5rem;
+
+}
+
+.header-btn .sign-in:hover {
+    background: var(--gradient);
+    transition: 0.5s;
+
+}
+
+.home {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: url(img/1.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+
+}
+
+.text span {
+    color: var(--main-color);
+
+}
+
+.text p {
+    margin: 0.5rem 0 1rem;
+
+}
+
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: #dedfe0;
+    padding: 20px;
+    border-radius: 0.5rem;
+
+}
+
+
+.input-box {
+    flex: 1 1 7rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.input-box span {
+    font-weight: 500;
+
+}
+
+.input-box input {
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    font-size:  1rem;
+
+}
+
+.form-container form .btn {
+    flex: 1 1 7rem;
+    padding: 10px 34px;
+    border-radius: 4px;
+    border: none;
+    background: #004AAD;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+
+}
+
+.form-container form .btn:hover {
+    background: var(--gradient);
+    transition: 1s;
+
+}
+
+button {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 30px;
+    background-color: #004AAD;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+
+}
+
+button:hover {
+    background: var(--gradient);
+    transition: 0.5s;
+}
+
+.heading {
+    text-align: center;
+
+}
+
+.heading span {
+    font-weight: 500;
+    text-transform: uppercase;
+
+}
+
+
+.heading h1 {
+    font-size: 2rem;
+
+}
+
+
+
+.ride-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+    gap: 1rem;
+    margin-top: 2rem;
+
+}
+
+.ride-container .box {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+
+}
+
+.ride-container .box .bx {
+    font-size: 34px;
+    padding: 10px;
+    background: #dedfe0;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+
+}
+
+.ride-container .box h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+    color: #444;
+
+}
+
+.ride-container .box .bx:hover,
+.ride-container .box .bxs-calendar-check {
+    background: var(--gradient);
+    color: #fff;
+    transition: 0.5s;
+
+        
+}
+
+.services {
+
+    padding: 50px 200px;
+    
+}
+
+
+.services-container   {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,auto));
+    gap: 6rem;
+    margin-top: 2rem;
+
+}
+
+.services-container .box {
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 1px 4px 41px rgba(45, 45, 45, 0.212);
+
+}
+
+.services-container .box .box-img {
+    width: 100%;
+    height: 200px;
+    background-color: var(--gradient);
+    
+
+}
+
+.services-container .box .box-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.services-container .box p{
+    padding: 0 10px;
+    border: 1px solid var(--text-color);
+    width: 58px;
+    border-radius: 0.5rem;
+    margin: 1rem 0 1rem;
+}
+
+.services-container .box h3 {
+    flex-grow: 2;
+    font-weight: 500;
+    padding: 0px 110px 0px 110px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.services-container .box h2 {
+    font-size: 1.1rem; 
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 0.2rem 0 0.5rem;
+
+}
+
+
+.services-container .box h2 span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0px 100px;
+
+}
+
+
+.services-container .box .btn{
+    display: flex;
+    justify-content: center;
+    background: #004AAD;
+    color: #fff;
+    padding: 10px;
+    border-radius: 0.5rem;
+    display: flex;
+
+}
+
+
+.services-container .box .btn:hover {
+    background: var(--gradient);
+    transition: 0.5s;
+
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 2rem;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
